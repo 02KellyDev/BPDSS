@@ -6,9 +6,9 @@ export default function Home() {
   const [tasks, setTasks] = useState([
   { id: 1, text: "Solicitar cita médica", completed: true, isEditing: false },
   { id: 2, text: "Comprar leche y pan", completed: false, isEditing: false }
-]);
+  ]);
 
-function handleAddTask() {
+  function handleAddTask() {
     if (taskText.trim() === "") return;
 
     const newTask = {
@@ -155,11 +155,11 @@ function handleAddTask() {
 
         {/* INFORMACIÓN INFERIOR */}
         <footer className="todo-footer">
-          <span className="ayuda-editar">
-            Desktop: ✎ aparece con hover
+          <span className="cuenta-tareas">
+            Tareas totales: {tasks.length}
           </span>
-          <span className="ayuda-eliminar">
-            hover → aparece 🗑
+          <span className="cuenta-completadas">
+            Tareas completadas: {tasks.filter(value => value.completed === true).length}
           </span>
         </footer>
       </section>
