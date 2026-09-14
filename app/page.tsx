@@ -129,7 +129,12 @@ export default function Home() {
                   autoFocus
                 />
               ) : (
-                <span className="texto-tarea">{task.text}</span>
+                <span 
+                  className="texto-tarea"
+                  onDoubleClick={() => handleToggleEdit(task.id)}
+                >
+                  {task.text}
+                </span>
               )}
 
               <button
