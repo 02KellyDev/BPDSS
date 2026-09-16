@@ -162,60 +162,65 @@ export default function Home() {
             </article>
           ))}
         </section>
+    </section> 
 
-        <section className="seccion-papelera" style={{ marginTop: "16px" }}>
-          <button
-            type="button"
-            onClick={handleToggleShowDeleted}
-            style={{
-              width: "100%",
-              padding: "8px",
-              cursor: "pointer",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              backgroundcolor: "#eee",
-              color: "#000"
-            }}
-          >
-            🗑 Papelera ({deletedTasks.length})
-          </button>
+    <section
+      className="seccion-papelera"
+      style={{
+        marginTop: "16px",
+        width: "100%",
+        maxWidth: "400px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <button
+        type="button"
+        onClick={handleToggleShowDeleted}
+        style={{
+          padding: "8px 20px",
+          cursor: "pointer",
+          borderRadius: "12px",
+          border: "1px solid #ccc",
+          backgroundColor: "#eee",
+          color: "#000",
+          fontWeight: "bold",
+        }}
+      >
+        🗑 Papelera ({deletedTasks.length})
+      </button>
 
-          {showDeleted && (
-            <div
-              className="panel-eliminadas"
-              style={{
-                marginTop: "10px",
-                padding: "10px",
-                border: "1px dashed #999",
-                borderRadius: "8px",
-                backgroundColor: "#fafafa",
-                color: "#000"
-              }}
-            >
-              <h4 style={{ margin: "0 0 8px 0", color: "#000" }}>Tareas Eliminadas</h4>
-              {deletedTasks.length === 0 ? (
-                <p style={{ fontSize: "12px", color: "#000", margin: 0 }}>
-                  No hay tareas en la papelera.
-                </p>
-              ) : (
-                <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "14px", color: "#000" }}>
-                  {deletedTasks.map((text, index) => (
-                    <li key={index}>{text}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
+      {showDeleted && (
+        <div
+          className="panel-eliminadas"
+          style={{
+            marginTop: "10px",
+            width: "100%",
+            padding: "10px",
+            border: "1px dashed #999",
+            borderRadius: "8px",
+            backgroundColor: "#ffffff",
+            color: "#000",
+            boxSizing: "border-box",
+          }}
+        >
+          <h4 style={{ margin: "0 0 8px 0", color: "#000", textAlign: "center" }}>
+            Tareas Eliminadas
+          </h4>
+          {deletedTasks.length === 0 ? (
+            <p style={{ fontSize: "12px", color: "#000", margin: 0, textAlign: "center" }}>
+              No hay tareas en la papelera.
+            </p>
+          ) : (
+            <ul style={{ margin: 0, paddingLeft: "20px", fontSize: "14px", color: "#000" }}>
+              {deletedTasks.map((text, index) => (
+                <li key={index}>{text}</li>
+              ))}
+            </ul>
           )}
-        </section>
-        {/* INFORMACIÓN INFERIOR */}
-        <footer className="todo-footer">
-          <span className="ayuda-editar">
-            Desktop: ✎ aparece con hover
-          </span>
-          <span className="ayuda-eliminar">
-            hover → aparece 🗑
-          </span>
-        </footer>
+        </div>
+      )}
       </section>
     </main>
   );
