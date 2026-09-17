@@ -140,7 +140,12 @@ export default function Home() {
                   autoFocus
                 />
               ) : (
-                <span className="texto-tarea">{task.text}</span>
+                <span 
+                  className="texto-tarea"
+                  onDoubleClick={() => handleToggleEdit(task.id)}
+                >
+                  {task.text}
+                </span>
               )}
 
               <button
@@ -222,6 +227,15 @@ export default function Home() {
           )}
         </div>
       )}
+        {/* INFORMACIÓN INFERIOR */}
+        <footer className="todo-footer">
+          <span className="cuenta-tareas">
+            Tareas totales: {tasks.length}
+          </span>
+          <span className="cuenta-completadas">
+            Tareas completadas: {tasks.filter(value => value.completed === true).length}
+          </span>
+        </footer>
       </section>
     </main>
   );
