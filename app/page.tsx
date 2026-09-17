@@ -168,6 +168,16 @@ export default function Home() {
             </article>
           ))}
         </section>
+        
+        {/* INFORMACIÓN INFERIOR */}
+        <footer className="todo-footer">
+          <span className="cuenta-tareas">
+            Tareas totales: {tasks.length}
+          </span>
+          <span className="cuenta-completadas">
+            Tareas completadas: {tasks.filter(value => value.completed === true).length}
+          </span>
+        </footer>
     </section> 
 
     <section
@@ -227,15 +237,6 @@ export default function Home() {
           )}
         </div>
       )}
-        {/* INFORMACIÓN INFERIOR */}
-        <footer className="todo-footer">
-          <span className="cuenta-tareas">
-            Tareas totales: {tasks.length}
-          </span>
-          <span className="cuenta-completadas">
-            Tareas completadas: {tasks.filter(value => value.completed === true).length}
-          </span>
-        </footer>
       </section>
     </main>
   );
