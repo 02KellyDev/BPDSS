@@ -66,6 +66,7 @@ export default function Home() {
       style={{
         minHeight: "100vh",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f5f5f5",
