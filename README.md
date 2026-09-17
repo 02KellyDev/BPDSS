@@ -1,3 +1,8 @@
+## INSTALLATION
+Install the project dependencies:
+\\\`bash
+npm install
+\\\`
 ## INTEGRANTES DEL EQUIPO
 - SAMUEL DUQUE LOPEZ :Integración y control de versiones (Git)
 - NICOLAS YAIR CORRO MARQUEZ :Lógica (JavaScript)
