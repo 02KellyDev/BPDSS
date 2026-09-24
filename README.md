@@ -1,9 +1,17 @@
-## INSTALLATION
+## FIRST STEPS OF EXECUTION
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Installation
 Install the project dependencies:
 ```bash
 npm install
 ```
-## FIRST STEPS OF EXECUTION
+
+## Getting Started
+
+First, run the development server:
+
 ```bash
 npm run dev
 # or
@@ -70,10 +78,3 @@ Para eliminar una tarea de forma permanente, haz clic en el icono de la papelera
 6. TRASH BIN VIEW
 En esta sección se pueden observar exclusivamente las tareas que han sido eliminadas.
 <img width="960" height="1025" alt="cap 8 " src="https://github.com/user-attachments/assets/b4c1665f-b1e4-4e37-9456-aad15f15fee2" />
-
-
-
-
-
-
-
