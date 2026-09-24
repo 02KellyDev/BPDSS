@@ -85,7 +85,7 @@ export default function Home() {
       >
         {/* ENCABEZADO */}
         <header className="todo-header">
-          <h1>MIS TAREAS</h1>
+          <h1>TODAS MIS TAREAS</h1>
         </header>
 
         <div className="separador"></div>
